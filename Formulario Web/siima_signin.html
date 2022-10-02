@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIIMA Login</title>
+
+    <style type="text/css">
+
+        header{
+            color:#22692b;
+        }
+        
+        #register fieldset {
+            border: none;
+            padding: 1%;
+        }
+
+        .inputField {
+            display: inline-block;
+            width: 15%;
+            height: 10%;
+            margin-right: 5%;
+        }
+
+        label {
+            color: rgb(20, 66, 20);
+        }
+
+        .valueInput {
+            display: inline-block;
+            border: double 5px green;
+
+            width: 15%;
+            height: 10%;
+        }
+
+        input[type="radio"] {
+            /* remove standard background appearance */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* create custom radiobutton appearance */
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            padding: 0px;
+            /* background-color only for content */
+            background-clip: content-box;
+            border: 2px solid #023008;
+            border-radius: 50%;
+        }
+
+        /* appearance for checked radiobutton */
+        input[type="radio"]:checked {
+            background-color: #12531d;
+        }
+
+        #register button {
+            display: inline-block;
+            border: none;
+            border-radius: 10%;
+            width: 10%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            margin: 3%;
+            margin-top: 2%;
+            color: white;
+        }
+
+        #cancel_button {
+            background: rgb(0, 100, 0);
+        }
+
+        #submit_button {
+            background: rgb(0, 100, 0);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Registrarse en SIIMA</h1>
+    </header>
+
+    <form method="POST" action="" id="register">
+        <fieldset>
+            <label for="first_name" class="inputField">Primer Nombre:</label>
+            <input type="text" name="first_name" minlength="3" maxlength="20" class="valueInput" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="second_name" class="inputField">Segundo Nombre:</label>
+            <input type="text" name="second_name" minlength="3" maxlength="20" class="valueInput">
+        </fieldset>
+
+        <fieldset>
+            <label for="sur_name" class="inputField">Apellidos:</label>
+            <input type="text" name="sur_name" minlength="3" maxlength="40" class="valueInput" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="ci_number" class="inputField">No. de Identidad:</label>
+            <input type="text" name="ci_number" minlength="11" maxlength="11" class="valueInput" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="age" class="inputField">Edad:</label>
+            <input type="number" name="age" min="0" max="120" class="valueInput" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="#genere_male">Hombre:</label>
+            <input type="radio" name="genere" id="genere_male" value="Male" class="genereInput" required checked>
+            <label for="#genere_female">Mujer:</label>
+            <input type="radio" name="genere" id="genere_male" value="Female" class="genereInput" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="phone" class="inputField">Telefono:</label>
+            <input type="text" name="phone" minlength="8" maxlength="8" class="valueInput">
+        </fieldset>
+
+        <br>
+        <button id="cancel_button" type="button">CANCEL</button>
+        <button id="submit_button" type="submit">REGISTRARSE</button>
+        
+    </form>
+
+    <footer>
+        <h5>Sistema Integral de Información Médica de Analisis @6267</h5>
+    </footer>
+</body>
+
+</html>
