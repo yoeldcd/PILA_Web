@@ -1,0 +1,33 @@
+nav{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    
+    left: 0;
+    right: 0;
+    
+    padding: 0;
+    margin: 0;
+    
+    background: gray;
+    
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.nav-link {
+    display: block;
+    background-image: linear-gradient(white, white, gray, darkgray);
+    color:black;
+    padding: 3vh;
+    
+    height: min-content;
+
+    text-align: center;
+}
+
+.nav-link:hover{
+    background-image: linear-gradient(black, black, gray);
+    color: white
+}

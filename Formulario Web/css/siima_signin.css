@@ -1,0 +1,130 @@
+                
+        :root {
+            --primary: #27632a;
+            --secondary: #33691e;
+            --enfasis: #234915;
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        header{
+            color: var(--primary);
+            padding-top: 2%;
+            text-align: center;
+        }
+        
+        #register {
+            width: 80%;
+            height: 80%;
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 10%;
+            border: none;
+        }
+        
+        #register fieldset {
+            border: none;
+            padding: 1%;
+        }
+        
+        #register fieldset {
+            text-align: start;
+            padding-left: 25%;
+        }
+        
+        #register fieldset label {
+            display: inline-block;
+            width: 20%;
+            height: 10%;
+            
+            margin-right: 5%;
+            
+            text-align: start;
+            color: var(--secondary);
+            
+        }
+        
+        #register fieldset label[for="#genere_male"],
+        #register fieldset label[for="#genere_female"] {
+            margin-right: 0%;
+            width: 15%;
+            
+            text-align: start;
+        }
+        
+        #register input {
+            outline: none;
+        }
+        
+        input[type="text"],
+        input[type="number"] {
+            display: inline-block;
+            border: none;
+            
+            width: 50%;
+            height: 10%;
+            
+            border-bottom: solid 2px var(--primary);
+        }
+                
+        input[type="text"]:focus-visible,
+        input[type="number"]:focus-visible {
+            border-bottom: solid 2px var(--enfasis);
+        }
+        
+        input[type="radio"] {
+            /* remove standard background appearance */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            
+            /* create custom radiobutton appearance */
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            
+            /* background-color only for content */
+            background-clip: content-box;
+            border: 3px double var(--secondary);
+            border-radius: 50%;
+        }
+        
+        /* appearance for checked radiobutton */
+        input[type="radio"]:checked {
+            background-color: var(--enfasis);
+        }
+        
+        #buttons_box {
+            width: 90%;
+            height: 5%;
+            
+            padding-top: 2%;
+            padding-left: 35%;
+            
+            text-align: start;
+        }
+        
+        #buttons_box button {
+            display: inline-block;
+            width: 20%;
+            height: 70%;
+                    
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-right: 5%;
+            
+            border-radius: 10px;
+            background: var(--secondary);
+            background-clip: border-box;
+            
+            padding: 0.5%;
+            border: none;
+            
+            font-size: 25dp;
+            
+            color: white;
+        }
+        

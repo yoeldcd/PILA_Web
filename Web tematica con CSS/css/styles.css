@@ -1,0 +1,77 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    width: 100%;
+    height: 100%;
+}
+
+article header {
+
+    margin: 1.5rem;
+    margin-top: 10vh;
+    
+    text-align: center;
+    font-size: x-large;
+
+    color: blue;
+}
+
+article section {
+    
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 4rem;
+    
+    font-size: medium;
+    text-align: justify;
+    
+    columns: 2;
+}
+
+article figure {
+    margin: 1rem;
+    margin-bottom: 0.4rem;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    
+    column-span: 1;
+    text-align: center;
+    
+    background-color: lightgray;
+}
+
+article figure img {
+    padding: 0.5rem;
+    background-color: white;
+    border: solid 2px darkgray; 
+}
+
+article figure figcaption {
+    font-size: medium;
+}
+
+article footer {
+    
+    height: 15vh;
+    
+    padding: 2rem;
+    background-color: aquamarine;
+    
+}
+
+article footer p {
+    
+    display: block;
+    height: 13vh;
+
+    padding-top: 2rem;
+
+    border: dotted 2px black;
+    text-align: center;
+
+}
