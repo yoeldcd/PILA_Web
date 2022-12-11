@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <header>
+            <title>Menú y Calculadora </title>
+            <link rel="stylesheet" href="style.css">
+
+            <style>
+                * {
+                    padding: 2px;
+                    margin: 25px;
+                }
+
+                h1 {
+                    font-family: cursive;
+                    font-size: 60px;
+                    color: blue;
+                }
+
+                button {
+                    border-radius: 20px;
+                    border-color: darkblue;
+                    color: blue;
+                    font-family: cursive;
+                    height: 35px;
+                    border-style: ridge;
+                }
+
+                input, select {
+                    border-color: darkblue;
+                    border-style: solid;
+                    font-size: 25px;
+                    border-radius: 20px;
+                }
+            </style>
+
+            <script>
+                var inVal1, inVal2, inResult, inComand;
+                
+                function ejecutar() {
+                    
+                    let num1 = parseInt(inVal1.value)
+                    let num2 = parseInt(inVal2.value)
+                    
+                    if (!validate(num1)){
+                        alert("Inserte valor 1")
+                        return;
+                    }
+                    
+                    if (!validate(num2)){
+                        alert("Inserte valor 2")
+                        return;
+                    }
+                    
+                    switch(inComand.value){
+                        case '+':
+                            alert(`La suma de ${num1} + ${num2} = ${num1+num2}`)
+                            break;
+
+                        case '-':
+                            alert(`La suma de ${num1} - ${num2} = ${num1-num2}`)
+                            break;
+                        
+                        case '*':
+                            alert(`El producto de ${num1} * ${num2} = ${num1*num2}`)
+                            break;
+                        
+
+                        case '/':
+                            if (num2 == 0)
+                                return alert('Divisor no puede ser 0')
+                            
+                            alert(`La division de ${num1} / ${num2} = ${parseInt(num1/num2)}`)
+                            break;
+                        
+                        case '%':
+                            if (num2 == 0)
+                                return alert('Divisor no puede ser 0')
+                            
+                            alert(`El resto de ${num1} % ${num2} = ${parseInt(num1/num2)}`)
+                            break;
+                        
+                    }
+
+                }
+                
+                function validate(valor) {
+                    if (isNaN(valor)) {
+                        return false;
+                    }
+                    else { return true; }
+                }
+                
+                function init() {
+                    
+                    inVal1 = document.getElementById('operator1')
+                    inVal2 = document.getElementById('operator2')
+                    inResult = document.getElementById('result')
+                    inComand = document.getElementById('comand')
+                    
+                    alert('Calculadora lista para operar')
+
+                }
+
+            </script>
+    </head>
+
+    <body onload="init();">
+        <h1>Calculadora</h1>
+        <br />
+        <input type="text" id="operator1">
+
+        <select type="text" id="comand" list="#operators">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+
+        <input type="text" id="operator2">
+        
+        <button onclick="ejecutar();"> <b> Resultado </b></button>
+        
+        <datalist id="result">
+        </datalist>
+    </body>
+
+</html>

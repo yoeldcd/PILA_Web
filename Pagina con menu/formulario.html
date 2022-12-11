@@ -1,4 +1,15 @@
-                
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SIIMA Login</title>
+    
+    <style>
+                        
         :root {
             --primary: #27632a;
             --secondary: #33691e;
@@ -129,3 +140,66 @@
             color: white;
         }
         
+    
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Registrarse en SIIMA</h1>
+    </header>
+
+    <form method="POST" action="" id="register">
+        <fieldset id="first_name_box">
+            <label for="first_name" class="inputLabel">Primer Nombre:</label>
+            <input type="text" name="first_name" minlength="3" maxlength="20" class="valueInput" required>
+        </fieldset>
+        
+        <fieldset id="second_name_box">
+            <label for="second_name" class="inputLabel">Segundo Nombre:</label>
+            <input type="text" name="second_name" minlength="3" maxlength="20" class="valueInput">
+        </fieldset>
+        
+        <fieldset id="sur_name_box">
+            <label for="sur_name" class="inputLabel">Apellidos:</label>
+            <input type="text" name="sur_name" minlength="3" maxlength="40" class="valueInput" required>
+        </fieldset>
+        
+        <fieldset id="ci_number_box">
+            <label for="ci_number" class="inputLabel">No. de Identidad:</label>
+            <input type="text" name="ci_number" minlength="11" maxlength="11" class="valueInput" required>
+        </fieldset>
+        
+        <fieldset id="age_box">
+            <label for="age" class="inputLabel">Edad:</label>
+            <input type="number" name="age" min="0" max="120" class="valueInput" required>
+        </fieldset>
+        
+        <fieldset id="genere_box">
+            <label>Genero:</label>
+            <input type="radio" name="genere" id="genere_male" value="Male" class="genereInput" required checked>
+            <label for="#genere_male">Hombre:</label>
+            <input type="radio" name="genere" id="genere_male" value="Female" class="genereInput" required>
+            <label for="#genere_female">Mujer:</label>
+        </fieldset>
+        
+        <fieldset id="phone_box">
+            <label for="phone" class="inputLabel">Telefono:</label>
+            <input type="text" name="phone" minlength="8" maxlength="8" class="valueInput">
+        </fieldset>
+        
+        <div id="buttons_box">
+            <button id="cancel_button" type="button">CANCELAR</button>
+            <button id="submit_button" type="submit">REGISTRARSE</button>
+        </div>
+        
+    </form>
+    
+    <footer>
+        <h5>Sistema Integral de Información Médica de Analisis @6267</h5>
+    </footer>
+</body>
+
+</html>
